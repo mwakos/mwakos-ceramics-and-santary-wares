@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Mwakos Ceramics </title>
+  <title>Mwakos Ceramics</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -17,9 +17,6 @@
       color: #fff;
       padding: 20px;
       text-align: center;
-
-
-      
     }
     nav {
       background: #34495e;
@@ -45,6 +42,7 @@
       margin-bottom: 20px;
       color: #2c3e50;
     }
+    /* Products grid */
     .products {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -55,13 +53,20 @@
       border-radius: 8px;
       padding: 15px;
       text-align: center;
-      background: orange;
+      background: #fff;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
     }
     .card img {
       max-width: 100%;
+      height: 150px;
+      object-fit: cover;
       border-radius: 6px;
       margin-bottom: 10px;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
     .contact, .quote-form {
       background: orange;
@@ -113,38 +118,34 @@
     .whatsapp-button:hover {
       background: #20b955;
     }
-
-
+    /* Quick banners */
     .quick-banners {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  background: #ecf0f1;
-  padding: 15px;
-  margin-bottom: 20px;
-}
-.quick-banners a {
-  background: #2c3e50;
-  color: orange;
-  padding: 10px 20px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-}
-.quick-banners a:hover {
-  background: #1a242f;
-}
- 
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      background: #ecf0f1;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+    .quick-banners a {
+      background: #2c3e50;
+      color: orange;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .quick-banners a:hover {
+      background: #1a242f;
+    }
   </style>
 </head>
 <body>
   <header>
-    <header>
-  <img src="Logo.jpg" alt="Mwakos Ceramics Logo" style="height:80px; margin-bottom:10px;">
-  <h1>Mwakos Ceramics</h1>
-  <p>Quality & Affordable Tiles for Your Home and Office</p>
-
+    <img src="images/logo.png" alt="Mwakos Ceramics Logo" style="height:80px; margin-bottom:10px;">
+    <h1>Mwakos Ceramics</h1>
+    <p>Quality & Affordable Tiles for Your Home and Office</p>
   </header>
 
   <nav>
@@ -154,14 +155,14 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  
-<!-- Quick Banner Links -->
-<div class="quick-banners">
-  <a href="#products">🛒 Shop Tiles</a>
-  <a href="#quote">💬 Request Quote</a>
-  <a href="https://wa.me/254725036503" target="_blank">📲 WhatsApp Us</a>
-</div>
-<!-- Banner Slider -->
+  <!-- Quick Banner Links -->
+  <div class="quick-banners">
+    <a href="#products">🛒 Shop Tiles</a>
+    <a href="#quote">💬 Request Quote</a>
+    <a href="https://wa.me/254725036503" target="_blank">📲 WhatsApp Us</a>
+  </div>
+
+ <!-- Banner Slider -->
   <div class="slider">
     <div class="slides">
       <img src="banner1.JPG" alt="Banner 1">
@@ -176,33 +177,37 @@
       <img src="banner10.jpg" alt="Banner 10">
     </div>
   </div>
+
+  <!-- Products Section -->
   <div class="container" id="products">
     <h2>Our Tiles</h2>
     <div class="products">
       <div class="card">
-        <img src="https://via.placeholder.com/250x150" alt="Floor Tiles">
+        <img src="images/floor.jpg" alt="Floor Tiles">
         <h3>Floor Tiles</h3>
         <p>Durable and stylish floor tiles for all spaces.</p>
       </div>
       <div class="card">
-        <img src="https://via.placeholder.com/250x150" alt="Wall Tiles">
+        <img src="images/wall.jpg" alt="Wall Tiles">
         <h3>Wall Tiles</h3>
         <p>Elegant wall tiles to give your home a modern look.</p>
       </div>
       <div class="card">
-        <img src="https://via.placeholder.com/250x150" alt="Bathroom Tiles">
+        <img src="images/bathroom.jpg" alt="Bathroom Tiles">
         <h3>Bathroom Tiles</h3>
         <p>Waterproof and easy to clean bathroom tiles.</p>
       </div>
     </div>
   </div>
 
+  <!-- About Section -->
   <div class="container" id="about">
     <h2>About Us</h2>
-    <p>At  Mwakos Ceramics SANTARYWARE AND TILES  Sales, we specialize in providing high-quality ceramic tiles at affordable prices. 
+    <p>At Mwakos Ceramics Sanitaryware and Tiles Sales, we specialize in providing high-quality ceramic tiles at affordable prices. 
     Whether you're renovating your home, office, or business space, we have the perfect tiles to match your style and budget.</p>
   </div>
 
+  <!-- Quote Form -->
   <div class="container quote-form" id="quote">
     <h2>Request a Quote</h2>
     <form action="mailto:info@mwakosceramics.com" method="post" enctype="text/plain">
@@ -215,15 +220,16 @@
     </form>
   </div>
 
+  <!-- Contact Section -->
   <div class="container contact" id="contact">
     <h2>Contact Us</h2>
     <p><strong>Phone:</strong> +254 725036503</p>
-    <p><strong>Email:</strong> mwakossolutions86@gmail.com.com</p>
+    <p><strong>Email:</strong> mwakossolutions86@gmail.com</p>
     <p><strong>Location:</strong> Kiambu, Kenya</p>
   </div>
 
   <footer>
-    <p>&copy; 2025  Mwakos Ceramics and santary wares. All Rights Reserved.</p>
+    <p>&copy; 2025 Mwakos Ceramics and Sanitarywares. All Rights Reserved.</p>
   </footer>
 
   <!-- WhatsApp Button -->
