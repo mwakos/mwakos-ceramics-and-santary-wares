@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome for clean vector icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-   <meta name="google-site-verification" content="phH2Cw7qesseFD4IKSqOANpbeRacZq96L89ynonF7jc" />
+     <meta name="google-site-verification" content="phH2Cw7qesseFD4IKSqOANpbeRacZq96L89ynonF7jc" />
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased">
 
@@ -16,9 +16,11 @@
     <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <div class="flex flex-col">
-                <span class="text-2xl font-black tracking-tight text-slate-900">MWAKOS</span>
-                <span class="text-xs uppercase font-bold tracking-widest text-emerald-600 -mt-1">Ceramics & Sanitary</span>
+                <span class="text-xl sm:text-2xl font-black tracking-tight text-slate-900">MWAKOS</span>
+                <span class="text-[10px] sm:text-xs uppercase font-bold tracking-widest text-emerald-600 -mt-1">Ceramics & Sanitary</span>
             </div>
+            
+            <!-- Desktop Navigation Links -->
             <nav class="hidden md:flex space-x-8 font-medium text-slate-600">
                 <a href="#home" class="hover:text-emerald-600 transition-colors">Home</a>
                 <a href="#products" class="hover:text-emerald-600 transition-colors">Products</a>
@@ -26,33 +28,50 @@
                 <a href="#reviews" class="hover:text-emerald-600 transition-colors">Reviews</a>
                 <a href="#contact" class="hover:text-emerald-600 transition-colors">Contact</a>
             </nav>
-            <div class="hidden sm:block">
-                <a href="tel:0725036503" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-5 py-2.5 rounded-full shadow-md shadow-emerald-600/20 transition-all transform hover:-translate-y-0.5">
-                    <i class="fa-solid fa-phone"></i> 0725 036503
+
+            <!-- Call Button & Mobile Menu Toggle -->
+            <div class="flex items-center gap-4">
+                <a href="tel:0725036503" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-sm sm:text-base shadow-md shadow-emerald-600/20 transition-all transform hover:-translate-y-0.5">
+                    <i class="fa-solid fa-phone"></i> <span class="hidden xs:inline">0725 036503</span>
                 </a>
+                <!-- Mobile Menu Button Button -->
+                <button id="menu-btn" class="block md:hidden text-slate-700 hover:text-emerald-600 focus:outline-none p-2" aria-label="Toggle Menu">
+                    <i id="menu-icon" class="fa-solid fa-bars text-2xl"></i>
+                </button>
             </div>
+        </div>
+
+        <!-- Mobile Dropdown Navigation Panel Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 transition-all duration-300 ease-in-out">
+            <nav class="flex flex-col px-4 pt-2 pb-6 space-y-3 font-medium text-slate-600">
+                <a href="#home" class="mobile-link py-2 border-b border-slate-50 hover:text-emerald-600 transition-colors">Home</a>
+                <a href="#products" class="mobile-link py-2 border-b border-slate-50 hover:text-emerald-600 transition-colors">Products</a>
+                <a href="#services" class="mobile-link py-2 border-b border-slate-50 hover:text-emerald-600 transition-colors">Services</a>
+                <a href="#reviews" class="mobile-link py-2 border-b border-slate-50 hover:text-emerald-600 transition-colors">Reviews</a>
+                <a href="#contact" class="mobile-link py-2 hover:text-emerald-600 transition-colors">Contact</a>
+            </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="relative bg-slate-900 text-white overflow-hidden py-24 lg:py-32">
+    <section id="home" class="relative bg-slate-900 text-white overflow-hidden py-16 sm:py-24 lg:py-32">
         <div class="absolute inset-0 opacity-25 mix-blend-multiply bg-cover bg-center" style="background-image: url('https://thearchitectsdiary.com/wp-content/uploads/2022/12/LE-ARCH-12-1024x682.jpg');"></div>
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-2xl">
-                <div class="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/30 rounded-full px-3 py-1 text-emerald-400 font-semibold text-sm mb-6">
+                <div class="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/30 rounded-full px-3 py-1 text-emerald-400 font-semibold text-xs sm:text-sm mb-6">
                     <i class="fa-solid fa-star text-amber-400"></i> 4.04 Google Rated Store in Wangige
                 </div>
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-none mb-6">
+                <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight sm:leading-none mb-6">
                     Premium Fittings for Modern Spaces
                 </h1>
-                <p class="text-lg text-slate-300 mb-8 leading-relaxed">
+                <p class="text-base sm:text-lg text-slate-300 mb-8 leading-relaxed">
                     Transform your home with Kenya's trusted dealers in premium tiles, sanitary ware, kitchen granites, electricals, and high-quality structural materials.
                 </p>
-                <div class="flex flex-wrap gap-4">
-                    <a href="#products" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-8 py-4 rounded-xl shadow-lg transition-all">
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#products" class="text-center bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-8 py-4 rounded-xl shadow-lg transition-all">
                         Explore Showroom
                     </a>
-                    <a href="#contact" class="bg-white/10 hover:bg-white/20 text-white border border-white/20 font-bold px-8 py-4 rounded-xl transition-all backdrop-blur-sm">
+                    <a href="#contact" class="text-center bg-white/10 hover:bg-white/20 text-white border border-white/20 font-bold px-8 py-4 rounded-xl transition-all backdrop-blur-sm">
                         Get a Free Quote
                     </a>
                 </div>
@@ -61,44 +80,44 @@
     </section>
 
     <!-- Products Gallery Grid -->
-    <section id="products" class="py-20 lg:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-16">
+    <section id="products" class="py-16 sm:py-20 lg:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
             <h2 class="text-xs uppercase tracking-widest font-black text-emerald-600 mb-3">Our Collection</h2>
-            <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Explore Our Quality Products</p>
-            <p class="mt-4 text-slate-600">We source premium, long-lasting finishing materials that blend utility with contemporary aesthetics.</p>
+            <p class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Explore Our Quality Products</p>
+            <p class="mt-4 text-sm sm:text-base text-slate-600">We source premium, long-lasting finishing materials that blend utility with contemporary aesthetics.</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             <!-- Product 1 -->
             <div class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all border border-slate-100">
-                <div class="h-64 overflow-hidden relative">
+                <div class="h-48 sm:h-64 overflow-hidden relative">
                     <img src="https://spenzaceramics.com/wp-content/uploads/2025/02/tile-display-in-the-showrrom.webp" alt="Ceramic Tiles" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     <span class="absolute top-4 left-4 bg-slate-900/80 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full">Top Seller</span>
                 </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold text-slate-900 mb-2">Premium Ceramic Tiles</h3>
+                <div class="p-5 sm:p-6">
+                    <h3 class="text-lg sm:text-xl font-bold text-slate-900 mb-2">Premium Ceramic Tiles</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">Elegant floor and wall tiles available in diverse textures, patterns, and sizes perfect for any residential or commercial project.</p>
                 </div>
             </div>
 
             <!-- Product 2 -->
             <div class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all border border-slate-100">
-                <div class="h-64 overflow-hidden relative">
+                <div class="h-48 sm:h-64 overflow-hidden relative">
                     <img src="https://artifexinterio.com/upload/projects/48/49_5_Display_area.jpg" alt="Sanitary Ware" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                 </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold text-slate-900 mb-2">Modern Sanitary Ware</h3>
+                <div class="p-5 sm:p-6">
+                    <h3 class="text-lg sm:text-xl font-bold text-slate-900 mb-2">Modern Sanitary Ware</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">High-grade ceramic toilets, sinks, washbasins, and contemporary bathroom fittings designed for water-efficiency and durability.</p>
                 </div>
             </div>
 
             <!-- Product 3 -->
-            <div class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all border border-slate-100">
-                <div class="h-64 overflow-hidden relative">
+            <div class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all border border-slate-100 mb-4 sm:mb-0">
+                <div class="h-48 sm:h-64 overflow-hidden relative">
                     <img src="https://www.superiorstoneandcabinet.com/wp-content/uploads/2023/01/African-Canyon-Granite-Kitchen-2-1440x810.jpg" alt="Granite Tops" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                 </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold text-slate-900 mb-2">Kitchen Granite Tops</h3>
+                <div class="p-5 sm:p-6">
+                    <h3 class="text-lg sm:text-xl font-bold text-slate-900 mb-2">Kitchen Granite Tops</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">Scratch-resistant, high-gloss natural granite slabs custom-cut to provide a luxury surface finishing for modern kitchens.</p>
                 </div>
             </div>
@@ -106,54 +125,54 @@
     </section>
 
     <!-- Services & New Arrivals Feature -->
-    <section id="services" class="bg-slate-900 text-white py-20 lg:py-28">
+    <section id="services" class="bg-slate-900 text-white py-16 sm:py-20 lg:py-28">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
                 <div class="lg:col-span-5">
                     <h2 class="text-xs uppercase tracking-widest font-black text-emerald-400 mb-3">What We Do</h2>
-                    <p class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-6">More Than Just a Fittings Shop</p>
-                    <p class="text-slate-400 mb-8 leading-relaxed">
+                    <p class="text-2xl sm:text-4xl font-extrabold tracking-tight mb-6">More Than Just a Fittings Shop</p>
+                    <p class="text-sm sm:text-base text-slate-400 mb-8 leading-relaxed">
                         We operate a comprehensive one-stop supply ecosystem in Kabete. Beyond tiles and sanitary fixtures, we ensure your building process is completely seamless.
                     </p>
                     
-                    <div class="space-y-4">
+                    <div class="space-y-5">
                         <div class="flex gap-4">
-                            <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
-                                <i class="fa-solid fa-truck"></i>
+                            <div class="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+                                <i class="fa-solid fa-truck text-sm sm:text-base"></i>
                             </div>
                             <div>
-                                <h4 class="text-lg font-bold">Timely Site Delivery</h4>
-                                <p class="text-slate-400 text-sm">Safe and quick transport of bulk material directly to your active construction site.</p>
+                                <h4 class="text-base sm:text-lg font-bold">Timely Site Delivery</h4>
+                                <p class="text-slate-400 text-xs sm:text-sm">Safe and quick transport of bulk material directly to your active construction site.</p>
                             </div>
                         </div>
                         <div class="flex gap-4">
-                            <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
-                                <i class="fa-solid fa-bolt"></i>
+                            <div class="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+                                <i class="fa-solid fa-bolt text-sm sm:text-base"></i>
                             </div>
                             <div>
-                                <h4 class="text-lg font-bold">Electrical & Plumbing Supplies</h4>
-                                <p class="text-slate-400 text-sm">Industrial-grade pipes, cables, switches, and core infrastructure accessories.</p>
+                                <h4 class="text-base sm:text-lg font-bold">Electrical & Plumbing Supplies</h4>
+                                <p class="text-slate-400 text-xs sm:text-sm">Industrial-grade pipes, cables, switches, and core infrastructure accessories.</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="lg:col-span-7 bg-slate-800 p-8 rounded-3xl border border-slate-700/50">
-                    <span class="bg-emerald-600 text-white text-xs font-black uppercase px-3 py-1 rounded-md tracking-wider">Now In Stock</span>
-                    <h3 class="text-2xl font-bold mt-4 mb-6">Interior & Structural Additions</h3>
+                <div class="lg:col-span-7 bg-slate-800 p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-slate-700/50">
+                    <span class="bg-emerald-600 text-white text-[10px] font-black uppercase px-2.5 py-1 rounded tracking-wider">Now In Stock</span>
+                    <h3 class="text-xl sm:text-2xl font-bold mt-4 mb-6">Interior & Structural Additions</h3>
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                        <div class="bg-slate-900/50 p-5 rounded-2xl border border-slate-700/30">
-                            <i class="fa-solid fa-key text-2xl text-emerald-400 mb-3"></i>
+                        <div class="bg-slate-900/50 p-4 sm:p-5 rounded-xl border border-slate-700/30">
+                            <i class="fa-solid fa-key text-xl sm:text-2xl text-emerald-400 mb-3"></i>
                             <h5 class="font-bold text-sm mb-1">Quality Door Locks</h5>
                             <p class="text-xs text-slate-400">High-security mechanisms.</p>
                         </div>
-                        <div class="bg-slate-900/50 p-5 rounded-2xl border border-slate-700/30">
-                            <i class="fa-solid fa-layer-group text-2xl text-emerald-400 mb-3"></i>
+                        <div class="bg-slate-900/50 p-4 sm:p-5 rounded-xl border border-slate-700/30">
+                            <i class="fa-solid fa-layer-group text-xl sm:text-2xl text-emerald-400 mb-3"></i>
                             <h5 class="font-bold text-sm mb-1">MDF Boards</h5>
                             <p class="text-xs text-slate-400">Smooth panels for custom joinery.</p>
                         </div>
-                        <div class="bg-slate-900/50 p-5 rounded-2xl border border-slate-700/30">
-                            <i class="fa-solid fa-square text-2xl text-emerald-400 mb-3"></i>
+                        <div class="bg-slate-900/50 p-4 sm:p-5 rounded-xl border border-slate-700/30">
+                            <i class="fa-solid fa-square text-xl sm:text-2xl text-emerald-400 mb-3"></i>
                             <h5 class="font-bold text-sm mb-1">Gypsum Boards</h5>
                             <p class="text-xs text-slate-400">Flawless modern ceiling designs.</p>
                         </div>
@@ -164,37 +183,37 @@
     </section>
 
     <!-- Social Proof / Reviews Section -->
-    <section id="reviews" class="py-20 lg:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-2xl mx-auto mb-16">
+    <section id="reviews" class="py-16 sm:py-20 lg:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
             <h2 class="text-xs uppercase tracking-widest font-black text-emerald-600 mb-3">Reputation</h2>
-            <p class="text-3xl font-extrabold text-slate-900 tracking-tight">What Our Customers Say</p>
+            <p class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">What Our Customers Say</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 relative">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">
+            <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-100 relative">
                 <div class="flex text-amber-400 gap-1 mb-4">
-                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star text-sm"></i><i class="fa-solid fa-star text-sm"></i><i class="fa-solid fa-star text-sm"></i><i class="fa-solid fa-star text-sm"></i><i class="fa-solid fa-star text-sm"></i>
                 </div>
-                <p class="text-slate-700 italic mb-6">"All in one shop, contact for orders and delivery. Friendly customer care and reliable products."</p>
+                <p class="text-slate-700 text-sm sm:text-base italic mb-6">"All in one shop, contact for orders and delivery. Friendly customer care and reliable products."</p>
                 <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center font-bold text-slate-600 text-sm">G</div>
+                    <div class="w-9 h-9 sm:w-10 sm:h-10 bg-slate-200 rounded-full flex items-center justify-center font-bold text-slate-600 text-sm">G</div>
                     <div>
-                        <h5 class="font-bold text-sm text-slate-900">Google Reviewer</h5>
-                        <p class="text-xs text-slate-400">Verified Client</p>
+                        <h5 class="font-bold text-xs sm:text-sm text-slate-900">Google Reviewer</h5>
+                        <p class="text-[10px] sm:text-xs text-slate-400">Verified Client</p>
                     </div>
                 </div>
             </div>
 
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 relative">
+            <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-100 relative">
                 <div class="flex text-amber-400 gap-1 mb-4">
-                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star text-sm"></i><i class="fa-solid fa-star text-sm"></i><i class="fa-solid fa-star text-sm"></i><i class="fa-solid fa-star text-sm"></i><i class="fa-solid fa-star text-sm"></i>
                 </div>
-                <p class="text-slate-700 italic mb-6">"Great place to source all your building finishes in Wangige. Their timely delivery saved my project timeline."</p>
+                <p class="text-slate-700 text-sm sm:text-base italic mb-6">"Great place to source all your building finishes in Wangige. Their timely delivery saved my project timeline."</p>
                 <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center font-bold text-slate-600 text-sm">B</div>
+                    <div class="w-9 h-9 sm:w-10 sm:h-10 bg-slate-200 rounded-full flex items-center justify-center font-bold text-slate-600 text-sm">B</div>
                     <div>
-                        <h5 class="font-bold text-sm text-slate-900">Builder Partner</h5>
-                        <p class="text-xs text-slate-400">Contractor</p>
+                        <h5 class="font-bold text-xs sm:text-sm text-slate-900">Builder Partner</h5>
+                        <p class="text-[10px] sm:text-xs text-slate-400">Contractor</p>
                     </div>
                 </div>
             </div>
@@ -202,43 +221,43 @@
     </section>
 
     <!-- Contact & Map Information Footer -->
-    <section id="contact" class="bg-slate-100 border-t border-slate-200 py-16 lg:py-24">
+    <section id="contact" class="bg-slate-100 border-t border-slate-200 py-12 sm:py-16 lg:py-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12">
                 
                 <div class="lg:col-span-5 space-y-6">
                     <div>
-                        <h3 class="text-2xl font-black text-slate-900">Mwakos Ceramic & Sanitary Wares</h3>
-                        <p class="text-slate-600 mt-2">Visit our main retail showroom in Wangige along Route 119 for dynamic sample displays.</p>
+                        <h3 class="text-xl sm:text-2xl font-black text-slate-900">Mwakos Ceramic & Sanitary Wares</h3>
+                        <p class="text-slate-600 text-sm sm:text-base mt-2">Visit our main retail showroom in Wangige along Route 119 for dynamic sample displays.</p>
                     </div>
 
                     <div class="space-y-4 text-slate-700">
                         <div class="flex items-start gap-4">
                             <i class="fa-solid fa-location-dot mt-1 text-emerald-600"></i>
                             <div>
-                                <p class="font-bold">Our Location</p>
-                                <p class="text-sm text-slate-600">Kabete, Route 119, Wangige, Kenya</p>
+                                <p class="font-bold text-sm sm:text-base">Our Location</p>
+                                <p class="text-xs sm:text-sm text-slate-600">Kabete, Route 119, Wangige, Kenya</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-4">
                             <i class="fa-solid fa-phone mt-1 text-emerald-600"></i>
                             <div>
-                                <p class="font-bold">Call / WhatsApp Orders</p>
-                                <p class="text-sm text-slate-600">0725 036503</p>
+                                <p class="font-bold text-sm sm:text-base">Call / WhatsApp Orders</p>
+                                <p class="text-xs sm:text-sm text-slate-600">0725 036503</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-4">
                             <i class="fa-solid fa-clock mt-1 text-emerald-600"></i>
                             <div>
-                                <p class="font-bold">Business Hours</p>
-                                <p class="text-sm text-slate-600">Open Daily · Closes at 5:30 PM</p>
+                                <p class="font-bold text-sm sm:text-base">Business Hours</p>
+                                <p class="text-xs sm:text-sm text-slate-600">Open Daily · Closes at 5:30 PM</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="lg:col-span-7 bg-white p-8 rounded-3xl shadow-sm border border-slate-200/60">
-                    <h4 class="text-xl font-bold text-slate-900 mb-4">Send an Order Inquiry</h4>
+                <div class="lg:col-span-7 bg-white p-5 sm:p-8 rounded-2xl shadow-sm border border-slate-200/60">
+                    <h4 class="text-lg sm:text-xl font-bold text-slate-900 mb-4">Send an Order Inquiry</h4>
                     <form class="space-y-4" onsubmit="event.preventDefault(); alert('Inquiry Simulation Successful!');">
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div>
@@ -254,7 +273,7 @@
                             <label class="block text-xs font-bold uppercase text-slate-500 mb-1">Material Requirements / Message</label>
                             <textarea rows="4" required placeholder="Tell us what items or sizes you need for your project..." class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-emerald-500 transition-colors"></textarea>
                         </div>
-                        <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 rounded-xl shadow-md transition-colors">
+                        <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 sm:py-4 rounded-xl shadow-md transition-colors text-sm sm:text-base">
                             Submit Request
                         </button>
                     </form>
@@ -262,11 +281,42 @@
 
             </div>
             
-            <div class="mt-16 pt-8 border-t border-slate-200 text-center text-xs text-slate-400">
+            <div class="mt-12 sm:mt-16 pt-8 border-t border-slate-200 text-center text-[11px] sm:text-xs text-slate-400">
                 <p>&copy; 2026 Mwakos Ceramic and Sanitary Wares. All rights reserved.</p>
             </div>
         </div>
     </section>
+
+    <!-- Mobile Navigation Menu Toggle Logic Script -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        // Toggle drop-down menu visibility
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            
+            // Transform menu icon between standard bars & close cross
+            if(mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            }
+        });
+
+        // Close dropdown when clicking a link
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            });
+        });
+    </script>
 
 </body>
 </html>
